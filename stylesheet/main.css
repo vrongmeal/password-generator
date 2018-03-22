@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html {
+    font: 400 5.5vw 'Source Sans Pro';
+    line-height: 1;
+    background: #010E1E;
+}
+
+.header {
+    padding: 2rem 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: #fff;
+}
+.header h1, .header h2 {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.header h1 {
+    font-size: 1.8rem;
+}
+.header h2 {
+    font-size: 1.63rem;
+    opacity: .7;
+    color: #D2B902;
+}
+
+.content {
+    text-align: center;
+    color: #fff;
+    opacity: .85;
+    padding: 0 1.2rem;
+}
+.content p {
+    line-height: 1.1;
+}
+.content a {
+    color: #D2B902;
+    text-decoration-line: underline;
+    text-decoration-color: #fff;
+    text-decoration-style: solid;
+}
+.content a:hover, .content a:focus {
+    text-decoration-color: #B9A40A;
+    color: #B9A40A;
+}
+
+.button {
+    width: 100%;
+    background: transparent;
+    padding: 3rem 0 0;
+}
+.button button {
+    position: relative;
+    height: 2rem;
+    width: auto;
+    border-radius: .2rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #D2B902;
+    font-size: 1rem;
+    padding: 0 1rem;
+    outline: none;
+    cursor: pointer;
+    color: #010E1E;
+}
+.button button:hover {
+    background: #B9A40A;
+}
+.button button:active {
+    top: .1rem;
+}
+.button button:focus {
+    box-shadow: 0 0 0 .2rem rgba(185, 164, 10, 0.555);
+}
+
+.main {
+    position: relative;
+    margin: .5rem .8rem;
+    border-radius: .2rem;
+    background: #D2B902;
+    padding: .5rem 0 0;
+    display: none;
+}
+.main .arrow {
+    border-left: .5rem solid transparent;
+    border-right: .5rem solid transparent;
+    border-bottom: .5rem solid #D2B902;
+    height: 0;
+    width: 0;
+    display: inline-block;
+    position: absolute;
+    top: -.45rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main .difficulty {
+    text-align: center;
+}
+.main .difficulty h1 {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.main .difficulty div {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.3rem;
+}
+.main .difficulty div button {
+    position: relative;
+    display: inline-block;
+    margin-right: .3rem;
+    height: 1.6rem;
+    width: 1.6rem;
+    border-radius: 50%;
+    font-size: .8rem;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+}
+.main .difficulty div button:hover {
+    background: rgba(255, 255, 255, .7);
+}
+.main .difficulty div button:active {
+    top: .1rem;
+}
+.main .difficulty div button:focus {
+    box-shadow: 0 0 0 .2rem rgba(1, 14, 30, 0.555);
+}
+.main .difficulty div button[value="5"] {
+    margin-right: 0;
+}
+.main .difficulty div button[aria-selected="true"] {
+    background: #010E1E;
+    color: #B9A40A;
+}
+.main .hr {
+    display: block;
+    width: 100%;
+    height: .04rem;
+    margin-top: .7rem;
+    background: transparent;
+}
+.main .pass {
+    display: inline-block;
+    padding: .6rem;
+    width: calc(100% - 2.4rem);
+    overflow: hidden;
+    color: #010E1E;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    text-align: center;
+    background: #fff;
+    border-bottom-left-radius: .2rem;
+    text-decoration: underline;
+    text-decoration-color: #B9A40A;
+}
+.main button.copy {
+    display: inline-block;
+    position: relative;
+    height: 2.4rem;
+    width: 2.4rem;
+    font-size: 1rem;
+    outline: none;
+    background: #B9A40A;
+    cursor: pointer;
+    border-bottom-right-radius: .2rem;
+}
+.main button.copy:focus {
+    animation: soft-blink .8s infinite;
+}
+
+.toast {
+    position: fixed;
+    background: rgba(255, 255, 255, .8);
+    color: #111;
+    font-size: .8rem;
+    padding: .4rem 0;
+    bottom: -1.6rem;
+    width: 90%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
+    display: block;
+    transition: all .3s;
+}
+
+@keyframes soft-blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media all and (min-width: 480px) {
+    html {
+        font-size: 4vw;
+    }
+}
+@media all and (min-width: 768px) {
+    html {
+        font-size: 3vh;
+    }
+    .toast {
+        width: calc(768px - 10rem);
+    }
+    .container {
+        display: block;
+        width: calc(768px - 5rem);
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,46 @@
+<!--Created by @vrongmeal, Simple Password Generator-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password generator - @vrongmeal</title>
+    <script type="text/javascript" src="./javascript/main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
+    <link href="./stylesheet/main.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Password</h1>
+            <h2>generator</h2>
+        </div>
+        <div class="content">
+            <p>This is a simple password generator</p>
+            <p>To be used in upcoming &lt;Password/&gt;</p>
+            <p>Made by <a href="">@vrongmeal</a></p>
+        </div>
+        <div class="button">
+            <button id="new-pass">+ Generate Password</button>
+        </div>
+        <div class="main">
+            <span class="arrow"></span>
+            <div class="difficulty">
+                <h1>Chose difficulty</h1>
+                <div>
+                    <button value="1" class="radio" aria-selected="false">1</button>
+                    <button value="2" class="radio" aria-selected="false">2</button>
+                    <button value="3" class="radio" aria-selected="true">3</button>
+                    <button value="4" class="radio" aria-selected="false">4</button>
+                    <button value="5" class="radio" aria-selected="false">5</button>
+                </div>
+            </div>
+            <span class="hr"></span>
+            <input type="text" value="Select difficulty!" class="pass" disabled><button class="copy" title="Copy to clipboard">&#8618;</button>
+        </div>
+        <span class="toast">Copied to clipboard</span>
+    </div>
+    <script type="text/javascript" src="./javascript/dynamic.js"></script>
+</body>
+</html>
